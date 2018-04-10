@@ -14,9 +14,16 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 3")
-
-
     
+    sal = float(input('Digite seu salário:  R$ '))
+    desconto = 0.11 * sal
+
+    if not desconto >= 318.20:
+        print('De acordo com o seu salário(R$ {:.2f}) seu desconto(11%) é de R$ {:.2f}'.format(sal, desconto))
+    else:
+        desconto = 318.20 
+        print('De acordo com o seu salário(R$ {:.2f}) seu desconto é de R$ {:.2f}'.format(sal, desconto))
+
+        
 if __name__ == '__main__':
     main()
