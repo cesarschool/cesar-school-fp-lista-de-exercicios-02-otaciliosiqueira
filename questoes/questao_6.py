@@ -22,6 +22,5 @@ def main():
     print('Sequência de DNA informarda: {}\nPorcentagem de nucleotídeos A: {}\nPorcentagem de nucleotídeos C: {}\nPorcentagem de nucleotídeos G: {}\nPorcentagem de nucleotídeos T: {}\nPorcentagem de nucleotídeos Inválidos: {}\n' .format(seqDna, porcentA, porcentC, porcentG, porcentT, porcentInvalidos))
 
 
-    
 if __name__ == '__main__':
     main()
