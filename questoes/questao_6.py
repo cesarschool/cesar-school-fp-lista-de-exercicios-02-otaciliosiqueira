@@ -12,7 +12,14 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 6")
+    seqDna = input('Digite uma sequência de DNA:  ').upper()
+    porcentA = seqDna.count('A') / len(seqDna)*100
+    porcentC = seqDna.count('C') / len(seqDna)*100
+    porcentG = seqDna.count('G') / len(seqDna)*100
+    porcentT = seqDna.count('T') / len(seqDna)*100
+
+    porcentInvalidos = 100 - (porcentA + porcentC + porcentG + porcentT)
+    print('Sequência de DNA informarda: {}\nPorcentagem de nucleotídeos A: {}\nPorcentagem de nucleotídeos C: {}\nPorcentagem de nucleotídeos G: {}\nPorcentagem de nucleotídeos T: {}\nPorcentagem de nucleotídeos Inválidos: {}\n' .format(seqDna, porcentA, porcentC, porcentG, porcentT, porcentInvalidos))
 
 
     
