@@ -14,7 +14,18 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 4")
+    
+    valCasa = float(input('Informe o valor da casa que pretende comprar: R$ '))
+    sal = float(input('Informe o seu salário: R$ '))
+    qtdAnos = int(input('Informe a quantidade de anos que pretende pagar: '))
+
+    meses = qtdAnos*12
+    prest = valCasa/meses
+
+    if prest > 0.3*sal:
+        print('Sua solicitação não foi aprovada. O valor excede ao valor para aprovação, seu salário(R${}) não é suficiente para as prestações calculadas.'.format(sal))
+    else:
+        print('Parabéns, sua solicitação foi aprovada. O valor da prestação ficará em {} X R${:.2f}'.format(meses, prest))
 
 
     
