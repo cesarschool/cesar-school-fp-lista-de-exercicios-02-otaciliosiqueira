@@ -37,6 +37,5 @@ def main():
         print('## ERRO ## - Você digitou números iguais')
    
 
-
 if __name__ == '__main__':
     main()
