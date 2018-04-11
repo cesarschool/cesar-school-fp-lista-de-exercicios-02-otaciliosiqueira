@@ -18,7 +18,68 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 8")
+    
+    ano = int(input('Digite o ano: '))
+    mes = int(input('Digite o mês: '))
+    dia = int(input('Digite o dia: '))
+
+
+    anoBissexto = ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0
+    cond = False
+
+
+    if (mes==1 or mes==3 or mes==5 or mes==7 or mes==8 or mes==10 or mes==12):
+        if dia==31:
+            if mes==12:
+                mes = 1
+                ano = ano + 1
+            else:
+                mes = mes + 1
+            dia = 1
+        elif (dia>31 or dia<=0):
+            print('ENTRADA INVALIDA DIA')
+        elif (mes>12 or mes<=0):
+            print('ENTRADA INVALIDA MES')
+        else:
+            dia = dia + 1
+    elif (mes==4 or mes==6 or mes==9 or mes==11):
+        if dia==30:
+            mes = mes + 1
+            dia = 1
+        elif (dia>30 or dia<=0):
+            print('ENTRADA INVALIDA')
+        elif (mes>12 or mes<=0):
+            print('ENTRADA INVALIDA MES')
+        else:
+            dia = dia + 1
+
+    elif mes==2:
+
+        if anoBissexto:
+            if dia<=0 or dia>29:
+                print('ENTRADA INCORRETA')
+            else:
+                if dia==29:
+                    dia = 1
+                    mes = mes + 1
+                else:
+                    dia = dia + 1
+
+
+        ## Se não for bissexto
+        else:
+            if dia<=0 or dia>28:
+                print('ENTRADA INCORRETA')
+            else:
+                if dia==28:
+                    dia = 1
+                    mes = mes + 1
+                else:
+                    dia = dia + 1
+    else:
+        print('ENTRADA INCORRETA')
+
+    print('Dia posterior: {}-{}-{}'.format(ano, mes, dia))
 
 
     
